@@ -31,4 +31,4 @@ Since the API will be accepting a phrase or an action and returning an appropria
 - created_at
 - updated_at
 
-These need to have corresponding entity classes, and a migrate specified so we can quickly spin up the database on our local machines.
+These need to have corresponding entity classes, and a migration specified so we can quickly spin up the database on our local machines.
