@@ -1,8 +1,6 @@
 package uk.co.bluetel;
 
-import uk.co.bluetel.core.Template;
-import com.yammer.dropwizard.config.Configuration;
-import com.yammer.dropwizard.db.DatabaseConfiguration;
+import io.dropwizard.Configuration;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -12,78 +10,50 @@ import javax.validation.constraints.NotNull;
 public class ApplicationConfiguration extends Configuration {
 
     /**
-     * Template name
+     * The Template Name
      */
     @NotEmpty
     private String template;
 
     /**
-     * The Default Template name
+     * The Default Template Name
      */
     @NotEmpty
     private String defaultName = "Default";
 
     /**
-     * Database Configuration, taking from the configuration.yml file
-     */
-    @Valid
-    @NotNull
-    @JsonProperty("database")
-    private DatabaseConfiguration databaseConfiguration = new DatabaseConfiguration();
-
-    /**
-     * Returns the current template name
+     * Returns the Template name
      * @return String
      */
+    @JsonProperty
     public String getTemplate() {
         return template;
     }
 
     /**
-     * Sets the current template name
+     * Sets the Template name
      * @param template
      */
+    @JsonProperty
     public void setTemplate(String template) {
         this.template = template;
     }
 
     /**
-     * Returns the default template name
+     * Returns the Default Name
      * @return String
      */
+    @JsonProperty
     public String getDefaultName() {
         return defaultName;
     }
 
     /**
-     * Sets the Default template name
-     * @param defaultName
+     * Sets the Default Name
+     * @param name
      */
-    public void setDefaultName(String defaultName) {
-        this.defaultName = defaultName;
-    }
-
-    /**
-     * Builds the current template
-     * @return Template
-     */
-    public Template buildTemplate() {
-        return new Template(template, defaultName);
-    }
-
-    /**
-     * Returns the Database configuration, taken from the yml configuration file
-     * @return DatabaseConfiguration
-     */
-    public DatabaseConfiguration getDatabaseConfiguration() {
-        return databaseConfiguration;
-    }
-
-    /**
-     * Overrides the database config
-     * @param databaseConfiguration
-     */
-    public void setDatabaseConfiguration(DatabaseConfiguration databaseConfiguration) {
-        this.databaseConfiguration = databaseConfiguration;
+    @JsonProperty
+    public void setDefaultName(String name) {
+        this.defaultName = name;
     }
 }
