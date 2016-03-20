@@ -1,11 +1,10 @@
-package uk.co.bluetel;
+package uk.co.bluetel.wwrs;
 
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
-import uk.co.bluetel.ApplicationConfiguration;
-import uk.co.bluetel.health.TemplateHealthCheck;
-import uk.co.bluetel.resources.DefaultResource;
+import uk.co.bluetel.wwrs.health.TemplateHealthCheck;
+import uk.co.bluetel.wwrs.resources.DefaultResource;
 
 public class ApplicationService extends Application<ApplicationConfiguration> {
 

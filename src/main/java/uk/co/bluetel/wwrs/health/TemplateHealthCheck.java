@@ -1,4 +1,4 @@
-package uk.co.bluetel.health;
+package uk.co.bluetel.wwrs.health;
 
 import com.codahale.metrics.health.HealthCheck;
 

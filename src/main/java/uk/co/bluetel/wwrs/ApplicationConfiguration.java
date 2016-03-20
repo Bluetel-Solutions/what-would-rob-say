@@ -1,4 +1,4 @@
-package uk.co.bluetel;
+package uk.co.bluetel.wwrs;
 
 import io.dropwizard.Configuration;
 import com.fasterxml.jackson.annotation.JsonProperty;
