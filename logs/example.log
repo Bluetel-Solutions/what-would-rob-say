@@ -1,0 +1,42 @@
+INFO  [2016-03-20 10:11:52,008] org.hibernate.annotations.common.Version: HCANN000001: Hibernate Commons Annotations {4.0.1.Final}
+INFO  [2016-03-20 10:11:52,031] org.hibernate.Version: HHH000412: Hibernate Core {4.1.9.Final}
+INFO  [2016-03-20 10:11:52,037] org.hibernate.cfg.Environment: HHH000206: hibernate.properties not found
+INFO  [2016-03-20 10:11:52,042] org.hibernate.cfg.Environment: HHH000021: Bytecode provider name : javassist
+INFO  [2016-03-20 10:11:52,174] com.yammer.dropwizard.hibernate.SessionFactoryFactory: Entity classes: [com.example.helloworld.core.Person]
+INFO  [2016-03-20 10:11:53,546] org.hibernate.dialect.Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+INFO  [2016-03-20 10:11:53,606] org.hibernate.engine.jdbc.internal.LobCreatorBuilder: HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+INFO  [2016-03-20 10:11:53,649] org.hibernate.engine.transaction.internal.TransactionFactoryInitiator: HHH000399: Using default transaction strategy (direct JDBC transactions)
+INFO  [2016-03-20 10:11:53,669] org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory: HHH000397: Using ASTQueryTranslatorFactory
+INFO  [2016-03-20 10:11:54,974] com.yammer.dropwizard.cli.ServerCommand: Starting hello-world
+                           web-scale hello world dP for the web
+                                                 88
+  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
+  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
+  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
+  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
+                                        88
+                                        dP
+
+INFO  [2016-03-20 10:11:54,982] org.eclipse.jetty.server.Server: jetty-8.1.10.v20130312
+INFO  [2016-03-20 10:11:55,231] com.sun.jersey.server.impl.application.WebApplicationImpl: Initiating Jersey application, version 'Jersey: 1.17.1 02/28/2013 12:47 PM'
+INFO  [2016-03-20 10:11:55,371] com.yammer.dropwizard.config.Environment: The following paths were found for the configured resources:
+
+    GET     /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    POST    /hello-world (com.example.helloworld.resources.HelloWorldResource)
+    GET     /protected (com.example.helloworld.resources.ProtectedResource)
+    GET     /people (com.example.helloworld.resources.PeopleResource)
+    POST    /people (com.example.helloworld.resources.PeopleResource)
+    GET     /people/{personId} (com.example.helloworld.resources.PersonResource)
+
+INFO  [2016-03-20 10:11:55,371] com.yammer.dropwizard.config.Environment: tasks = 
+
+    POST    /tasks/gc (com.yammer.dropwizard.tasks.GarbageCollectionTask)
+
+INFO  [2016-03-20 10:11:55,835] org.eclipse.jetty.server.AbstractConnector: Started InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2016-03-20 10:11:55,850] org.eclipse.jetty.server.AbstractConnector: Started SocketConnector@0.0.0.0:8081
+INFO  [2016-03-20 10:15:54,472] org.eclipse.jetty.server.Server: Graceful shutdown SocketConnector@0.0.0.0:8081
+INFO  [2016-03-20 10:15:54,475] org.eclipse.jetty.server.Server: Graceful shutdown InstrumentedBlockingChannelConnector@0.0.0.0:8080
+INFO  [2016-03-20 10:15:54,480] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,null}
+INFO  [2016-03-20 10:15:54,480] org.eclipse.jetty.server.Server: Graceful shutdown o.e.j.s.ServletContextHandler{/,file:/Users/danielcox/Documents/Sites/what-would-rob-say/build/classes/main/}
+INFO  [2016-03-20 10:15:56,541] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,file:/Users/danielcox/Documents/Sites/what-would-rob-say/build/classes/main/}
+INFO  [2016-03-20 10:15:56,542] org.eclipse.jetty.server.handler.ContextHandler: stopped o.e.j.s.ServletContextHandler{/,null}
