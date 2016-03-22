@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'gradle-one-jar'
+apply plugin: 'idea'
 apply plugin: 'application'
 
 // Use Java 7 by default
