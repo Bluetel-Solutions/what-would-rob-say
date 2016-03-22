@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Bluetel-Solutions/what-would-rob-say.svg?branch=master)](https://travis-ci.org/Bluetel-Solutions/what-would-rob-say)
+
 # what-would-rob-say
 An API created from the DropWizard Framework
 
