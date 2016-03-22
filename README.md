@@ -14,6 +14,11 @@ You can then see this at `127.0.0.1:8080`
 ### Health Checks
 To see the results of the health checks (to which we should have a few once the database has been setup) you can go to `127.0.0.1:8081/healthcheck`
 
+### Running Tests
+To run the junit tests use the command:
+
+	./gradlew test
+
 # Database
 Since the API will be accepting a phrase or an action and returning an appropriate response, we need the following tables:
 

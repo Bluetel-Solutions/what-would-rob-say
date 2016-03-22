@@ -1,6 +1,7 @@
 package uk.co.bluetel.wwrs;
 
 import io.dropwizard.Configuration;
+import io.dropwizard.db.DataSourceFactory;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.validator.constraints.NotEmpty;
 
@@ -20,6 +21,12 @@ public class ApplicationConfiguration extends Configuration {
      */
     @NotEmpty
     private String defaultName = "Default";
+
+    @Valid
+    @NotNull
+    @JsonProperty
+    private DataSourceFactory database = new DataSourceFactory();
+
 
     /**
      * Returns the Template name
@@ -55,5 +62,13 @@ public class ApplicationConfiguration extends Configuration {
     @JsonProperty
     public void setDefaultName(String name) {
         this.defaultName = name;
+    }
+
+    /**
+     * Returns the Database configuration
+     * @return DataSourceFactory
+     */
+    public DataSourceFactory getDataSourceFactory() {
+        return this.database;
     }
 }

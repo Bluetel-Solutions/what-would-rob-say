@@ -4,7 +4,6 @@ import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import uk.co.bluetel.wwrs.health.TemplateHealthCheck;
-import uk.co.bluetel.wwrs.resources.DefaultResource;
 
 public class ApplicationService extends Application<ApplicationConfiguration> {
 
