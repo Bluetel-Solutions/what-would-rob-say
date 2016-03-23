@@ -1,5 +1,6 @@
 package uk.co.bluetel.wwrs;
 
+import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -15,6 +16,7 @@ public class DefaultResource {
      * @return Response
      */
     @GET
+    @RolesAllowed("Basic")
     public Response getDefault() {
         return Response.ok("Route Working").build();
     }
