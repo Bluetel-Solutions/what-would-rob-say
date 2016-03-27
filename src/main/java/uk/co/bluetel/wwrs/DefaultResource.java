@@ -18,6 +18,15 @@ public class DefaultResource {
     @GET
     @RolesAllowed("Basic")
     public Response getDefault() {
-        return Response.ok("Route Working").build();
+        return Response.ok("Hello normal user!").build();
     }
+
+    /**
+     * Resource only available for the admin.
+     * @return
+     */
+    @GET
+    @Path("/admin")
+    @RolesAllowed("Admin")
+    public Response getAdmin(){return Response.ok("Hello Admin!").build();}
 }

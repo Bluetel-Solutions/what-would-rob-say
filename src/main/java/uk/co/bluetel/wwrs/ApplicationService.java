@@ -50,14 +50,16 @@ public class ApplicationService extends Application<ApplicationConfiguration> {
     public void run(ApplicationConfiguration configuration,
                     Environment environment) {
 
-        // Add Resources
-        environment.jersey().register(new AuthDynamicFeature(
-                new BasicCredentialAuthFilter.Builder<User>()
+        //Auth setup
+        environment.jersey().register(new AuthDynamicFeature(new BasicCredentialAuthFilter.Builder<User>()
                 .setAuthenticator(new WWRSAuthenticator())
                 .setAuthorizer(new WWRSAuthorizer())
-                .buildAuthFilter()
-        ));
+                .setRealm("SUPER SECRET STUFF")
+                .buildAuthFilter()));
         environment.jersey().register(new AuthValueFactoryProvider.Binder(User.class));
+        environment.jersey().register(RolesAllowedDynamicFeature.class);
+
+        // Add Resources
         environment.jersey().register(new DefaultResource());
 
         // Add Health Checks

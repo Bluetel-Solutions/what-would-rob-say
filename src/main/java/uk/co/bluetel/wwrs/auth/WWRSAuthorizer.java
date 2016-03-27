@@ -7,10 +7,17 @@ import io.dropwizard.auth.Authorizer;
  */
 public class WWRSAuthorizer implements Authorizer<User> {
 
+    /**
+     * Method which check if the user can get access to a resoure.
+     * @param principal
+     * @param role
+     * @return
+     */
     @Override
     public boolean authorize(User principal, String role) {
-        boolean authorizeOut = principal.getName().equals("Username") && role.equals("ADMIN");
-        System.out.println("Authorize executing: "+authorizeOut);
-        return principal.getName().equals("Username") && role.equals("Basic");
+        if(principal.getRoles() != null && principal.getRoles().contains(role)) {
+            return true;
+        }
+        return false;
     }
 }

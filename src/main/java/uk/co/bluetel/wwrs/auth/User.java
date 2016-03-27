@@ -1,5 +1,7 @@
 package uk.co.bluetel.wwrs.auth;
 
+import com.google.common.collect.ImmutableSet;
+
 import javax.security.auth.Subject;
 import java.security.Principal;
 
@@ -7,9 +9,12 @@ import java.security.Principal;
  * @author David Avila.
  */
 public class User implements Principal {
+    private String name;
+    private ImmutableSet<String> roles;
 
-    public User(String username){
-
+    public User(String username, ImmutableSet<String> secret){
+        this.name = username;
+        this.roles = secret;
     }
     @Override
     public boolean equals(Object another) {
@@ -28,11 +33,23 @@ public class User implements Principal {
 
     @Override
     public String getName() {
-        return "Username";
+        return name;
     }
 
     @Override
     public boolean implies(Subject subject) {
         return true;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ImmutableSet<String> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(ImmutableSet<String> roles) {
+        this.roles = roles;
     }
 }
