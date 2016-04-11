@@ -1,8 +1,12 @@
-                           web-scale hello world dP for the web
-                                                 88
-  .d8888b. dP.  .dP .d8888b. 88d8b.d8b. 88d888b. 88 .d8888b.
-  88ooood8  `8bd8'  88'  `88 88'`88'`88 88'  `88 88 88ooood8
-  88.  ...  .d88b.  88.  .88 88  88  88 88.  .88 88 88.  ...
-  `88888P' dP'  `dP `88888P8 dP  dP  dP 88Y888P' dP `88888P'
-                                        88
-                                        dP
+ ,ggg,      gg      ,gg ,ggg,      gg      ,gg ,ggggggggggg,         ,gg,
+dP""Y8a     88     ,8P dP""Y8a     88     ,8P dP"""88""""""Y8,      i8""8i
+Yb, `88     88     d8' Yb, `88     88     d8' Yb,  88      `8b      `8,,8'
+ `"  88     88     88   `"  88     88     88   `"  88      ,8P       `88'
+     88     88     88       88     88     88       88aaaad8P"        dP"8,
+     88     88     88       88     88     88       88""""Yb,        dP' `8a
+     88     88     88       88     88     88       88     "8b      dP'   `Yb
+     Y8    ,88,    8P       Y8    ,88,    8P       88      `8i _ ,dP'     I8
+      Yb,,d8""8b,,dP         Yb,,d8""8b,,dP        88       Yb,"888,,____,dP
+       "88"    "88"           "88"    "88"         88        Y8a8P"Y88888P"
+
+ v.0.1.0

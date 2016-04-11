@@ -1,4 +1,4 @@
-package uk.co.bluetel.wwrs;
+package uk.co.bluetel.wwrs.resources;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
